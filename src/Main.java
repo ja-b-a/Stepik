@@ -139,6 +139,5 @@ public class Main {
         int u = 100;
         int w = 4 * u;
         System.out.println(w);
-
     }
 }
