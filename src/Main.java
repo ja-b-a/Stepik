@@ -1,7 +1,8 @@
-import java.sql.SQLOutput;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
 //        // 2.1 Вывод на экран
 //
 //        System.out.print("Hello, World!");
@@ -142,70 +143,173 @@ public class Main {
 //        int w = 4 * u;
 //        System.out.println(w);
 
-        //2.4. Массивы
+//        //2.4. Массивы
+//
+////        1. Создайте массив из трёх целочисленных значений и проинициализируйте их таким образом, чтобы сумма всех элементов
+////        была равна 101. Вычислите сумму всех элементов массива и присвойте результат переменной result.
+//        int [] arrayInt = new int [3];
+//        arrayInt [0] = 90;
+//        arrayInt [1] = 10;
+//        arrayInt [2] = 1;
+//        int result = arrayInt[0] + arrayInt [1] + arrayInt [2];
+//        System.out.println(result);
+//
+////        2. Создай целочисленный массив длиною 5 элементов. Проинициализируй элемент только под третьим индексом
+////        значением -7. Вычисли сумму всех элементов и присвойте результат переменной result.
+//        int [] array = new int [5];
+//        array [2] = -7;
+//        int resultF = array [0] + array [1] + array [2] + array [3] + array [4];
+//        System.out.println(resultF);
+//
+////        3. Создай массив типа boolean с длиной в 3 элемента. Проинициализируй второй элемент значением true.Выведи
+////        в консоль все значения массива, переводя при этом каждый раз курсор на новую строку.
+////        Sample Output:
+////        false
+////        true
+////        false
+//        boolean [] arrayBoolean = new boolean[3];
+//        arrayBoolean [1] = true;
+//        System.out.println(arrayBoolean[0]);
+//        System.out.println(arrayBoolean[1]);
+//        System.out.println(arrayBoolean[2]);
+//
+////        4. Создайте массив типа String с длиной в 3 элемента. После создания проинициализируйте каждый
+////        индекс массива частью ФИО, где под первым индексом Иванов, под вторым индексом Иван, а под третьим Иванович.
+////        Сложите все элементы массива в одну строку, расставляя пробелы.
+////        Sample Output:
+////        Иванов Иван Иванович
+//        String [] arrayString = new String[3];
+//        arrayString[0] = "Иванов";
+//        arrayString[1] = "Иван";
+//        arrayString[2] = "Иванович";
+//        System.out.println(arrayString[0] + " " + arrayString[1] + " " + arrayString[2]);
+//
+////        5. Дан массив строк, содержащий названия трёх городов. Нужно вывести их в консоль в строго заданном формате.
+////                Город 1: Москва
+////                Город 2: Лондон
+////                Город 3: Париж
+//        String[] cities = {"Москва", "Лондон", "Париж"};
+//        System.out.print("Город 1: " + cities[0] + "\nГород 2: " + cities[1] + "\nГород 3: " + cities[2]);
+//
+////        6. Создан массив целых чисел. Необходимо вывести каждый элемент массива в формате:
+////              Элемент 3: 30
+////              Элемент 2: 20
+////              Элемент 1: 10
+//        int[] numbers = {10, 20, 30};
+//        System.out.println("Элемент 3: " + numbers[2] + "\nЭлемент 2: " + numbers[1] + "\nЭлемент 1: " + numbers[0]);
+//
+////        7. Дан массив символов. Составь и выведи слово "Java" — буквы уже есть, но расположены в перемешанном виде.
+////        Используй System.out.print() для вывода на одной строке.
+//        char[] letters = {'a', 'J', 'v', 'a'};
+//        char[] sort = {letters[1], letters[0], letters[2], letters[3]};
+//        String resultFin = new String(sort);
+//        System.out.println(resultFin);
+//
+////        8. Дан массив символов. Выведи слово "Code", правильно выбрав индексы символов из массива.
+//        char[] lettersCode = {'e', 'C', 'd', 'o'};
+//        System.out.println("" + lettersCode[1] + lettersCode[3] + lettersCode[2] + lettersCode[0]);
 
-//        1. Создайте массив из трёх целочисленных значений и проинициализируйте их таким образом, чтобы сумма всех элементов
-//        была равна 101. Вычислите сумму всех элементов массива и присвойте результат переменной result.
-        int [] arrayInt = new int [3];
-        arrayInt [0] = 90;
-        arrayInt [1] = 10;
-        arrayInt [2] = 1;
-        int result = arrayInt[0] + arrayInt [1] + arrayInt [2];
-        System.out.println(result);
+//        2.5. Условные операторы
 
-//        2. Создай целочисленный массив длиною 5 элементов. Проинициализируй элемент только под третьим индексом
-//        значением -7. Вычисли сумму всех элементов и присвойте результат переменной result.
-        int [] array = new int [5];
-        array [2] = -7;
-        int resultF = array [0] + array [1] + array [2] + array [3] + array [4];
-        System.out.println(resultF);
+//        1. Дана переменная int age = 20. Если возраст больше 18, вывести в консоль "Взрослый".
+        int age = 20;
+        if (age > 18) {
+            System.out.println("Взрослый");
+        }
 
-//        3. Создай массив типа boolean с длиной в 3 элемента. Проинициализируй второй элемент значением true.Выведи
-//        в консоль все значения массива, переводя при этом каждый раз курсор на новую строку.
-//        Sample Output:
-//        false
-//        true
-//        false
-        boolean [] arrayBoolean = new boolean[3];
-        arrayBoolean [1] = true;
-        System.out.println(arrayBoolean[0]);
-        System.out.println(arrayBoolean[1]);
-        System.out.println(arrayBoolean[2]);
+//        2. Пользователь вводит число в переменную input. Если число положительное, вывести "Положительное",
+//                если отрицательное — "Отрицательное", если ноль — "Это ноль".
+        int input = scanner.nextInt();
+        if (input > 0) {
+            System.out.println("Положительное");
+        }
+        if (input == 0) {
+            System.out.println("Это ноль");
+        }
+        if (input < 0) {
+            System.out.println("Отрицательное");
+        }
 
-//        4. Создайте массив типа String с длиной в 3 элемента. После создания проинициализируйте каждый
-//        индекс массива частью ФИО, где под первым индексом Иванов, под вторым индексом Иван, а под третьим Иванович.
-//        Сложите все элементы массива в одну строку, расставляя пробелы.
-//        Sample Output:
-//        Иванов Иван Иванович
-        String [] arrayString = new String[3];
-        arrayString[0] = "Иванов";
-        arrayString[1] = "Иван";
-        arrayString[2] = "Иванович";
-        System.out.println(arrayString[0] + " " + arrayString[1] + " " + arrayString[2]);
+//        3. Пользователь вводит два числа в переменные inputOne и inputTwo.
+//                Вывести:
+//                "Первое больше", если первое число больше второго,
+//                "Второе больше", если второе больше первого,
+//                "Числа равны", если они одинаковы.
+        int inputOne = scanner.nextInt();
+        int inputTwo = scanner.nextInt();
+        if (inputOne > inputTwo) {
+            System.out.println("Первое больше");
+        }
+        if (inputOne < inputTwo) {
+            System.out.println("Второе больше");
+        }
+        if (inputOne == inputTwo) {
+            System.out.println("Числа равны");
+        }
 
-//        5. Дан массив строк, содержащий названия трёх городов. Нужно вывести их в консоль в строго заданном формате.
-//                Город 1: Москва
-//                Город 2: Лондон
-//                Город 3: Париж
-        String[] cities = {"Москва", "Лондон", "Париж"};
-        System.out.print("Город 1: " + cities[0] + "\nГород 2: " + cities[1] + "\nГород 3: " + cities[2]);
+//        4. На вход дается целое число, которое записывается в переменную input. Если значение input больше 0,
+//                то выводим в консоль сообщение Больше нуля!, если меньше 0, то выводим сообщение Меньше нуля!
+        int input1 = scanner.nextInt(); // Тестовые данные
+        if (input1 > 0) {
+            System.out.println("Больше нуля!");
+        }
+        if (input1 < 0){
+            System.out.println("Меньше нуля!");
+        }
 
-//        6. Создан массив целых чисел. Необходимо вывести каждый элемент массива в формате:
-//              Элемент 3: 30
-//              Элемент 2: 20
-//              Элемент 1: 10
-        int[] numbers = {10, 20, 30};
-        System.out.println("Элемент 3: " + numbers[2] + "\nЭлемент 2: " + numbers[1] + "\nЭлемент 1: " + numbers[0]);
+//        5. Пользователь вводит номер месяца (1–12). Программа определяет время года и выводит:
+//        "Зима" (12, 1, 2),
+//        "Весна" (3–5),
+//        "Лето" (6–8),
+//        "Осень" (9–11).
+        int input2 = scanner.nextInt();
+        if (input2 == 12 || input2 == 1 || input2 == 2) {
+            System.out.println("Зима");
+        }
+        else if (input2 >= 3 && input2 <= 5) {
+            System.out.println("Весна");
+        }
+        else if (input2 >= 6 && input2 <= 8) {
+            System.out.println("Лето");
+        }
+        else if (input2 >= 9 && input2 <= 11) {
+            System.out.println("Осень");
+        }
 
-//        7. Дан массив символов. Составь и выведи слово "Java" — буквы уже есть, но расположены в перемешанном виде.
-//        Используй System.out.print() для вывода на одной строке.
-        char[] letters = {'a', 'J', 'v', 'a'};
-        char[] sort = {letters[1], letters[0], letters[2], letters[3]};
-        String resultFin = new String(sort);
-        System.out.println(resultFin);
+//        6. На вход дается целое число от 1 до 7, которое записывается в переменную input. Необходимо сопоставить его
+//        с днем недели и вывести название в консоль.
+//                Например: 1 -> Понедельник, 2 -> Вторник, ..., 7 -> Воскресенье
+        int input3 = scanner.nextInt(); // Тестовые данные
+        switch (input3) {
+            case 1:
+                System.out.println("Понедельник");
+                break;
+            case 2:
+                System.out.println("Вторник");
+                break;
+            case 3:
+                System.out.println("Среда");
+                break;
+            case 4:
+                System.out.println("Четверг");
+                break;
+            case 5:
+                System.out.println("Пятница");
+                break;
+            case 6:
+                System.out.println("Суббота");
+                break;
+            case 7:
+                System.out.println("Воскресенье");
+                break;
+        }
 
-//        8. Дан массив символов. Выведи слово "Code", правильно выбрав индексы символов из массива.
-        char[] lettersCode = {'e', 'C', 'd', 'o'};
-        System.out.println("" + lettersCode[1] + lettersCode[3] + lettersCode[2] + lettersCode[0]);
+//        7. На вход дается строка, которое записывается в переменную input. Если длина строки больше 5 символов,
+//            выводим в консоль сообщение Длинная строка!, если меньше 5, выводим в консоль Короткая строка!, если длина
+//            равна 5, то выводим Строка средней длины!.
+        String input4 = scanner.nextLine();
+        String itog = (input4.length() > 5) ? "Длинная строка!" :
+                (input4.length() == 5) ? "Строка средней длины!" : "Короткая строка!";
+        System.out.println(itog);
     }
 }
